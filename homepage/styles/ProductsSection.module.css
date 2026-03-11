@@ -1,20 +1,19 @@
-/* ProductsSection.module.css */
+/* ProductsSection.module.css — ダーク */
 
-.productsSection {
-  background-color: #fff;
-}
+.productsSection { background-color: var(--bg2); }
 
 .titleArea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   text-align: center;
   padding: 0 24px;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
 }
 
-/* カードリスト（縦並び・中央寄せ） */
 .cardList {
   display: flex;
   flex-direction: column;
@@ -22,66 +21,61 @@
   max-width: 560px;
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
+  z-index: 1;
 }
 
-/* カード */
 .card {
-  background-color: #fff;
+  background: var(--bg3);
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
   padding: 32px 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* coming soonカードは少し暗め */
-.cardComingSoon {
-  background-color: #f8f8f8;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
 }
 
-/* ロゴエリア */
+.card:nth-child(1) { border-top: 3px solid var(--yellow); }
+.card:nth-child(2) { border-top: 3px solid var(--pink); }
+.card:nth-child(3) { border-top: 3px solid var(--purple); }
+
+.cardComingSoon { background: var(--bg2); opacity: 0.8; }
+
 .logoArea {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  min-height: 80px;
+  min-height: 72px;
 }
 
-.logoEmoji {
-  font-size: 64px;
-  line-height: 1;
-}
+.logoEmoji { font-size: 60px; line-height: 1; }
 
-/* coming soon シルエット */
 .silhouette {
-  width: 64px;
-  height: 64px;
-  background-color: #1a1a1a;
+  width: 60px; height: 60px;
+  background: rgba(255,255,255,0.15);
   border-radius: 50%;
-  opacity: 0.7;
 }
 
-/* テキスト */
-.cardBody {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+.cardBody { display: flex; flex-direction: column; gap: 10px; }
 
 .brandName {
   font-size: 20px;
   font-weight: 900;
+  color: #fff;
   letter-spacing: 0.05em;
-  color: #1a1a1a;
 }
 
 .brandDesc {
   font-size: 13px;
-  color: #555;
-  line-height: 1.7;
-  max-width: 400px;
+  color: var(--muted);
+  line-height: 1.75;
 }

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function ContactSection() {
   return (
-    <section id="contact" className={`${styles.section} ${styles.bgWhite}`}>
+    <section id="contact" className={`${styles.section} ${styles.bgDark}`}>
       <div className={styles.inner}>
         <p className={styles.labelJa}>お問い合わせ</p>
         <h2 className={styles.heading}>Contact</h2>

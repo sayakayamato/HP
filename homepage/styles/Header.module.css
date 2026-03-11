@@ -1,29 +1,30 @@
-/* Header.module.css */
+/* Header.module.css — ダーク */
 
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   z-index: 100;
-  background: transparent;
+  background: rgba(13,13,43,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .headerInner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 14px 24px;
 }
 
 .logo {
-  font-size: 13px;
-  font-weight: 700;
-  color: #1a1a1a;
-  letter-spacing: 0.05em;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: 0.08em;
 }
 
-/* ハンバーガーボタン */
 .menuBtn {
   display: flex;
   flex-direction: column;
@@ -35,28 +36,30 @@
   display: block;
   width: 24px;
   height: 2px;
-  background-color: #1a1a1a;
+  background-color: #fff;
+  border-radius: 2px;
   transition: transform 0.3s, opacity 0.3s;
 }
 
-/* ドロワー */
 .drawer {
-  background-color: rgba(255,255,255,0.97);
-  padding: 16px 0 24px;
+  background: rgba(13,13,43,0.97);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 8px 0 20px;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #eee;
 }
 
 .drawerLink {
   padding: 14px 24px;
   font-size: 14px;
-  font-weight: 600;
-  color: #1a1a1a;
-  border-bottom: 1px solid #f0f0f0;
+  font-weight: 700;
+  color: var(--muted);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   letter-spacing: 0.05em;
+  transition: color 0.2s, background 0.2s;
 }
 
 .drawerLink:hover {
-  background-color: #f8f8f8;
+  color: var(--yellow);
+  background: rgba(247,217,76,0.06);
 }

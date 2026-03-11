@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function AboutSection() {
   return (
-    <section id="about" className={`${styles.section} ${styles.bgWhite}`}>
+    <section id="about" className={`${styles.section} ${styles.bgDark}`}>
       <div className={styles.inner}>
         <p className={styles.labelJa}>私たちについて</p>
         <h2 className={styles.heading}>About</h2>
