@@ -13,7 +13,7 @@ export default function Header() {
 
         {/* ロゴ */}
         <Link href="/" className={styles.logo}>
-          concon.inc
+          yurunitan project
         </Link>
 
         {/* ハンバーガーボタン */}

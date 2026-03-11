@@ -6,15 +6,15 @@ import Link from 'next/link'
 const brands = [
   {
     id: 'tokyo-lollipop',
-    logo: '🍭',          // 実際は <Image src="/images/tl-logo.png" /> に差し替え
-    name: 'TOKYO LOLLIPOP',
+    logo: null,          // 実際は <Image src="/images/tl-logo.png" /> に差し替え
+    name: 'メディア',
     description: 'レトロでキュートなキャラクターたちが大人のポップな世界を彩ります。グッズ展開やコラボレーションを積極的に行っています。',
     href: '/products/tokyo-lollipop',
   },
   {
     id: 'kaisha-daruma',
-    logo: '🎎',
-    name: 'カイシャダルマ',
+    logo: null,
+    name: 'お守りケース',
     description: '会社・仕事・玉・社会人をテーマにした、ゆるくてリアルな共感系キャラクターです。オフィスグッズなどに展開中。',
     href: '/products/kaisha-daruma',
   },

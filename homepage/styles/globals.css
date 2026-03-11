@@ -2,8 +2,9 @@
    globals.css
    ========================================== */
 
+
 :root {
-  --bg:        #0d0d2b;
+  --bg:        #5daecb;
   --bg2:       #16163a;
   --bg3:       #1f1f50;
   --yellow:    #f7d94c;
@@ -22,7 +23,7 @@
 }
 
 html, body {
-  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif, 'Nico Moji';
   font-size: 14px;
   color: var(--text);
   background-color: var(--bg);
