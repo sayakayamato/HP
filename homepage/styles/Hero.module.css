@@ -1,0 +1,134 @@
+/* Hero.module.css */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+/* ========================================
+   有機的ブロブ背景パターン（青×ピンク×白）
+   ======================================== */
+.blobBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(0px);
+}
+
+/* 青ブロブ群 */
+.blobBlue1 {
+  width: 320px;
+  height: 280px;
+  background-color: #2952ff;
+  top: -60px;
+  left: -80px;
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+}
+.blobBlue2 {
+  width: 260px;
+  height: 240px;
+  background-color: #2952ff;
+  top: 40%;
+  right: -60px;
+  border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
+}
+.blobBlue3 {
+  width: 200px;
+  height: 180px;
+  background-color: #2952ff;
+  bottom: 5%;
+  left: 20%;
+  border-radius: 70% 30% 50% 50% / 40% 60% 40% 60%;
+}
+
+/* ピンクブロブ群 */
+.blobPink1 {
+  width: 280px;
+  height: 240px;
+  background-color: #f5b8c8;
+  top: 10%;
+  left: 30%;
+  border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+}
+.blobPink2 {
+  width: 240px;
+  height: 200px;
+  background-color: #f5b8c8;
+  bottom: 10%;
+  right: 10%;
+  border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+}
+.blobPink3 {
+  width: 160px;
+  height: 140px;
+  background-color: #f5b8c8;
+  top: 60%;
+  left: 5%;
+  border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
+}
+
+/* ========================================
+   ヒーローコンテンツ
+   ======================================== */
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 80px 24px 40px;
+}
+
+.logoText {
+  font-size: clamp(72px, 20vw, 160px);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #fff;
+  /* 太いアウトライン文字風 */
+  -webkit-text-stroke: 4px #1a1a1a;
+  text-shadow:
+    4px 4px 0 #1a1a1a,
+    -2px -2px 0 #1a1a1a;
+  line-height: 1;
+  text-align: center;
+}
+
+/* キャラクターエリア */
+.characterArea {
+  display: flex;
+  justify-content: center;
+}
+
+.characterPlaceholder {
+  width: 160px;
+  height: 160px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #1a1a1a;
+}
+
+.charEmoji {
+  font-size: 72px;
+}
+
+@media (max-width: 768px) {
+  .blobBlue1  { width: 200px; height: 180px; }
+  .blobBlue2  { width: 160px; height: 140px; }
+  .blobPink1  { width: 180px; height: 160px; }
+  .blobPink2  { width: 160px; height: 130px; }
+}

@@ -1,0 +1,62 @@
+/* Header.module.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: transparent;
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.logo {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.05em;
+}
+
+/* ハンバーガーボタン */
+.menuBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #1a1a1a;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ドロワー */
+.drawer {
+  background-color: rgba(255,255,255,0.97);
+  padding: 16px 0 24px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #eee;
+}
+
+.drawerLink {
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  border-bottom: 1px solid #f0f0f0;
+  letter-spacing: 0.05em;
+}
+
+.drawerLink:hover {
+  background-color: #f8f8f8;
+}
