@@ -1,33 +1,40 @@
 /* ==========================================
-   globals.css
-   ========================================== */
-
+   globals.css — ピンク×クリームパレット
+   ==========================================
+   --hero-bg     ヒーロー背景（サーモンピンク）
+   --bg          コンテンツ背景（クリームベージュ）
+   --bg2         セクション背景（やや濃いクリーム）
+   --bg3         カード背景（オフホワイト）
+   --primary     メインカラー（ラスト赤）
+   --primary-lt  薄ピンク
+   --primary-dk  濃ラスト
+   --text        本文色（ダークラスト）
+   --muted       サブテキスト
+*/
 
 :root {
-  --bg:        #5daecb;
-  --bg2:       #16163a;
-  --bg3:       #1f1f50;
-  --yellow:    #f7d94c;
-  --pink:      #ff6baa;
-  --green:     #6effa0;
-  --purple:    #a67cff;
-  --text:      #ffffff;
-  --muted:     #9090b8;
-  --radius:    16px;
+  --hero-bg:    #ffa4a4;
+  --bg:         #e8e0c4;
+  --bg2:        #ddd5b0;
+  --bg3:        #f5f0e4;
+  --primary:    #c04848;
+  --primary-lt: #f5c0b8;
+  --primary-dk: #8b2020;
+  --text:       #4a1515;
+  --muted:      #8a6060;
+  --border:     rgba(192,72,72,0.15);
+  --radius:     16px;
+  --shadow:     0 4px 24px rgba(139,32,32,0.08);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
-  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif, 'Nico Moji';
-  font-size: 14px;
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  font-size: 15px;
   color: var(--text);
   background-color: var(--bg);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 a  { color: inherit; text-decoration: none; }

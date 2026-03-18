@@ -1,65 +1,76 @@
-/* Header.module.css — ダーク */
-
+/* Header.module.css */
 .header {
   position: fixed;
   top: 0; left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(13,13,43,0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(232,224,196,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
 }
-
 .headerInner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 24px;
+  padding: 16px 32px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-
 .logo {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 800;
-  color: var(--yellow);
-  letter-spacing: 0.08em;
+  color: var(--primary-dk);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
-
+.nav { display: flex; gap: 32px; }
+.navLink {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+.navLink:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary-lt);
+}
 .menuBtn {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   padding: 4px;
 }
-
 .bar {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--primary-dk);
   border-radius: 2px;
-  transition: transform 0.3s, opacity 0.3s;
 }
-
 .drawer {
-  background: rgba(13,13,43,0.97);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  background: rgba(232,224,196,0.97);
+  border-top: 1px solid var(--border);
   padding: 8px 0 20px;
   display: flex;
   flex-direction: column;
 }
-
 .drawerLink {
   padding: 14px 24px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--muted);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  letter-spacing: 0.05em;
-  transition: color 0.2s, background 0.2s;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
 }
-
-.drawerLink:hover {
-  color: var(--yellow);
-  background: rgba(247,217,76,0.06);
+.drawerLink:hover { color: var(--primary); }
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .menuBtn { display: flex; }
 }

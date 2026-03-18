@@ -1,4 +1,4 @@
-/* Hero.module.css — ダーク宇宙系 */
+/* Hero.module.css — サーモンピンク × グリッド */
 
 .hero {
   position: relative;
@@ -8,117 +8,52 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg);
+  background-color: var(--hero-bg);
 }
 
-/* 星ドット背景 */
+/* グリッドパターン */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle, rgba(247,217,76,0.9) 2px, transparent 2px),
-    radial-gradient(circle, rgba(255,107,170,0.8) 1.5px, transparent 1.5px),
-    radial-gradient(circle, rgba(174, 255, 203, 0.831) 2px, transparent 2px),
-    radial-gradient(circle, rgba(166,124,255,0.8) 1px, transparent 1px),
-    radial-gradient(circle, rgba(236, 233, 233, 0.909) 1px, transparent 1px);
-  background-size: 180px 180px, 120px 120px, 200px 200px, 90px 90px, 60px 60px;
-  background-position: 10px 20px, 50px 80px, 130px 50px, 30px 140px, 80px 30px;
+    linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px);
+  background-size: 48px 48px;
   z-index: 0;
-  animation: twinkle 6s ease-in-out infinite alternate;
 }
 
-@keyframes twinkle {
-  0%   { opacity: 0.5; }
-  100% { opacity: 1; }
-}
-
-/* グラデーション光源 */
-.hero::after {
+/* 淡いグロー */
+/* .hero::after {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 20% 30%, rgba(100,80,255,0.35) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 60% at 80% 70%, rgba(255,107,170,0.2) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 50% 0%,  rgba(247,217,76,0.15) 0%, transparent 60%);
+    radial-gradient(ellipse 50% 60% at 70% 40%, rgba(255,220,210,0.35) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at 20% 70%, rgba(200,60,60,0.12)   0%, transparent 60%);
   z-index: 0;
   pointer-events: none;
-}
+} */
 
-/* 浮遊する大きなカラードット */
+/* 浮遊ドット */
 .floatDot {
   position: absolute;
   border-radius: 50%;
   z-index: 0;
-  animation: floatUp 8s ease-in-out infinite alternate;
+  animation: floatUp 9s ease-in-out infinite alternate;
 }
-.dot1 { width:120px; height:120px; background:var(--yellow); top:12%; left:8%;   opacity:0.9;  animation-delay:0s;   }
-.dot2 { width: 80px; height: 80px; background:var(--pink);   top:25%; right:10%; opacity:0.85; animation-delay:1s;   }
-.dot3 { width: 60px; height: 60px; background:var(--green);  bottom:20%;left:15%;opacity:0.8;  animation-delay:2s;   }
-.dot4 { width: 50px; height: 50px; background:var(--purple); bottom:30%;right:20%;opacity:0.8; animation-delay:0.5s; }
-.dot5 { width: 30px; height: 30px; background:var(--yellow); top:60%; left:45%;  opacity:0.7;  animation-delay:1.5s; }
+.dot1 { width: 90px; height: 90px; background:rgba(255,255,255,0.25); top:10%; left:6%;    animation-delay:0s;   }
+.dot2 { width: 60px; height: 60px; background:rgba(255,255,255,0.20); top:22%; right:8%;   animation-delay:1.2s; }
+.dot3 { width: 44px; height: 44px; background:rgba(255,255,255,0.18); bottom:18%;left:14%; animation-delay:2s;   }
+.dot4 { width: 36px; height: 36px; background:rgba(255,255,255,0.22); bottom:28%;right:18%;animation-delay:0.6s; }
+.dot5 { width: 22px; height: 22px; background:rgba(255,255,255,0.30); top:58%; left:44%;   animation-delay:1.8s; }
 
 @keyframes floatUp {
-  0%   { transform: translateY(0px) scale(1); }
-  100% { transform: translateY(-22px) scale(1.06); }
+  0%   { transform: translateY(0px)   scale(1);    }
+  100% { transform: translateY(-18px) scale(1.04); }
 }
 
-/* ヒーローコンテンツ */
-.heroContent {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 100px 24px 60px;
-  text-align: center;
-}
-
-.eyebrow {
-  font-size: 34px;
-  font-weight: 700;
-  color: var(--yellow);
-  letter-spacing: 0.15em;
-}
-
-.logoText {
-  font-size: clamp(72px, 20vw, 150px);
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  line-height: 1;
-  color: #fff;
-  text-shadow: 4px 4px 0 var(--yellow), 8px 8px 0 var(--pink);
-  font-family: "Darumadrop One", sans-serif;
-}
-
-.subtitle {
-  font-size: 14px;
-  color: var(--muted);
-  letter-spacing: 0.1em;
-}
-
-.characterArea { margin-top: 8px; }
-
-.characterPlaceholder {
-  width: 140px; height: 140px;
-  background: rgba(247,217,76,0.12);
-  border: 3px solid var(--yellow);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 32px rgba(247,217,76,0.35);
-}
-
-.charEmoji { font-size: 64px; line-height: 1; }
-
-/* ========================================
-   散らばるステッカー
-   ======================================== */
-
-/* 共通：絶対配置 + CSS変数で回転・サイズを制御 */
+/* ステッカー */
 .sticker {
   position: absolute;
   z-index: 2;
@@ -126,12 +61,10 @@
   height: var(--size, 64px);
   transform: rotate(var(--rotate, 0deg));
   animation: stickerFloat 6s ease-in-out infinite alternate;
-  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.25));
+  filter: drop-shadow(2px 4px 8px rgba(139,32,32,0.15));
   pointer-events: none;
   user-select: none;
 }
-
-/* animation-delay のみ担当（位置は JS 側の pos で制御） */
 .stickerTopLeft     { animation-delay: 0s;   }
 .stickerTopCenter   { animation-delay: 0.8s; }
 .stickerTopRight    { animation-delay: 1.6s; }
@@ -141,26 +74,80 @@
 .stickerBottomCenter{ animation-delay: 1s;   }
 .stickerBottomRight { animation-delay: 0.6s; }
 
-/* ふわふわアニメーション（各ステッカーが微妙にズレて動く） */
 @keyframes stickerFloat {
-  0%   { transform: rotate(var(--rotate, 0deg)) translateY(0px);    }
-  100% { transform: rotate(var(--rotate, 0deg)) translateY(-12px);  }
+  0%   { transform: rotate(var(--rotate, 0deg)) translateY(0px);   }
+  100% { transform: rotate(var(--rotate, 0deg)) translateY(-12px); }
+}
+.stickerEmoji { font-size: var(--size, 64px); line-height: 1; display: block; }
+
+/* ヒーローコンテンツ */
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 120px 24px 80px;
+  text-align: center;
 }
 
-/* 絵文字プレースホルダー用 */
-.stickerEmoji {
-  font-size: var(--size, 64px);
-  line-height: 1;
-  display: block;
+/* ヒーロー画像 */
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
-/* スマホ：ステッカーを小さく・端に寄りすぎないよう調整 */
+/* eyebrow */
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+/* 名前 */
+.logoText {
+  font-size: clamp(52px, 13vw, 110px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: #f0dfc0;
+  text-shadow: 3px 3px 0 rgba(139,32,32,0.25), 0 2px 16px rgba(139,32,32,0.15);
+  font-family: "Darumadrop One", sans-serif;
+}
+
+/* キャッチコピー */
+.tagline {
+  font-size: 15px;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.08em;
+  max-width: 380px;
+  line-height: 1.8;
+}
+
+/* スクロールヒント */
+.scrollHint {
+  margin-top: 8px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.15em;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(6px); }
+}
+
 @media (max-width: 768px) {
-  .dot1 { width:70px; height:70px; }
-  .dot2 { width:50px; height:50px; }
-  .dot3 { width:40px; height:40px; }
-
+  .heroImgWrap { width: 200px; }
+  .imgTop  { width: 200px; height: 100px; border-radius: 100px 100px 0 0; background-size: 200px 200px; }
+  .imgBottom { width: 200px; height: 100px; border-radius: 0 0 100px 100px; background-size: 200px 200px; }
   .sticker { transform: rotate(var(--rotate, 0deg)) scale(0.65); }
-  .stickerTopCenter   { display: none; }
-  .stickerBottomCenter{ display: none; }
 }

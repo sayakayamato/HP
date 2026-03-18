@@ -1,49 +1,8 @@
-/* Footer.module.css — ダーク */
-
-.footer {
-  background-color: var(--bg2);
-  border-top: 1px solid rgba(255,255,255,0.06);
-  padding: 48px 0 32px;
-}
-
-.inner {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  text-align: center;
-}
-
-.company {
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--yellow);
-  letter-spacing: 0.1em;
-}
-
-.nav {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  width: 100%;
-}
-
-.link {
-  font-size: 13px;
-  color: var(--muted);
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  transition: color 0.2s;
-  letter-spacing: 0.05em;
-}
-
-.link:hover { color: var(--yellow); }
-
-.copy {
-  font-size: 11px;
-  color: rgba(255,255,255,0.25);
-  margin-top: 8px;
-}
+/* Footer.module.css */
+.footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 48px 0 32px; }
+.inner { max-width: 760px; margin: 0 auto; padding: 0 32px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+.name { font-size: 15px; font-weight: 800; color: var(--primary-dk); letter-spacing: 0.1em; text-transform: uppercase; }
+.nav { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; }
+.link { font-size: 12px; font-weight: 700; color: var(--muted); transition: color 0.2s; letter-spacing: 0.08em; text-transform: uppercase; }
+.link:hover { color: var(--primary); }
+.copy { font-size: 11px; color: var(--primary-lt); margin-top: 8px; letter-spacing: 0.04em; }

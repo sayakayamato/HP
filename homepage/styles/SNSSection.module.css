@@ -1,0 +1,31 @@
+/* SNSSection.module.css */
+.section {
+  padding: 64px 0;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.inner {
+  max-width: 760px; margin: 0 auto; padding: 0 32px;
+  display: flex; align-items: center; gap: 32px; flex-wrap: wrap;
+}
+.label { font-size: 11px; font-weight: 800; letter-spacing: 0.25em; color: var(--primary); text-transform: uppercase; flex-shrink: 0; }
+.linkRow { display: flex; gap: 16px; flex-wrap: wrap; }
+.snsLink {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 20px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 13px; font-weight: 600;
+  transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow);
+}
+.snsLink:hover {
+  color: var(--primary);
+  border-color: var(--primary-lt);
+  box-shadow: 0 4px 16px rgba(192,72,72,0.15);
+}
+.icon { display: flex; align-items: center; }
+@media (max-width: 600px) { .inner { flex-direction: column; align-items: flex-start; gap: 20px; } }

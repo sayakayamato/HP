@@ -1,0 +1,71 @@
+/* WorksSection.module.css */
+.section { padding: 96px 0; background: var(--bg2); }
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.titleBlock { display: flex; flex-direction: column; gap: 6px; }
+.labelEn {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.heading { font-size: 32px; font-weight: 900; color: var(--text); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.card {
+  background: var(--bg3);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(139,32,32,0.12);
+}
+.thumb {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--bg2), var(--primary-lt));
+  overflow: hidden;
+}
+.thumbPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--primary-lt);
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+.category {
+  position: absolute;
+  top: 12px; left: 12px;
+  font-size: 10px;
+  font-weight: 800;
+  background: var(--primary);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+}
+.cardBody { padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+.title { font-size: 15px; font-weight: 800; color: var(--text); }
+.desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } .section { padding: 64px 0; } }
