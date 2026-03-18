@@ -32,16 +32,15 @@ export default function Hero() {
         </div>
       ))} */}
 
-      <Image
-        src="/images/hero.png"
-        alt="hero"
-        fill
-        className={styles.heroImg}
-        priority
-      />
-
       <div className={styles.heroContent}>
         <p className={styles.eyebrow}>Hello, I'm</p>
+
+        {/* 分割円の顔写真 */}
+        <div className={styles.heroImgWrap}>
+          <div className={styles.imgTop} />
+          <div className={styles.imgBottom} />
+          
+        </div>
 
         {/* ↓ 自分の名前に変更してください */}
         <h1 className={styles.logoText}>YOUR NAME</h1>
