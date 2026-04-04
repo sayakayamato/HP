@@ -1,37 +1,43 @@
 /* ==========================================
-   globals.css — ピンク×クリームパレット
+   globals.css — ミントティール×パープルパレット
    ==========================================
-   --hero-bg     ヒーロー背景（サーモンピンク）
-   --bg          コンテンツ背景（クリームベージュ）
-   --bg2         セクション背景（やや濃いクリーム）
-   --bg3         カード背景（オフホワイト）
-   --primary     メインカラー（ラスト赤）
-   --primary-lt  薄ピンク
-   --primary-dk  濃ラスト
-   --text        本文色（ダークラスト）
+   --primary     メインカラー（ミントティール）
+   --primary-lt  薄ティール
+   --primary-dk  ダークティール
+   --text        本文色
    --muted       サブテキスト
 */
 
 :root {
-  --hero-bg:    #ffa4a4;
-  --bg:         #e8e0c4;
-  --bg2:        #ddd5b0;
-  --bg3:        #f5f0e4;
-  --primary:    #c04848;
-  --primary-lt: #f5c0b8;
-  --primary-dk: #8b2020;
-  --text:       #4a1515;
-  --muted:      #8a6060;
-  --border:     rgba(192,72,72,0.15);
+  --hero-bg:    #e2cbf6;
+  --bg:         #fdfdfd;
+  --bg2:        rgba(232,224,196,0.88);
+  --bg3:        #ffffff;
+  --primary:    #ec8479;
+  --primary-lt: #fa9e94;
+  --primary-dk: #c8675d;
+  --text:       #1a2e2b;
+  --text-white: #ffffff;
+  --muted:      #6a8a87;
+  --border:     #e2cbf6c8;
   --radius:     16px;
-  --shadow:     0 4px 24px rgba(139,32,32,0.08);
+  /* --shadow:     0 4px 24px #efe5f8; */
+
+  /* ===== セクション個別の背景色 =====
+     ここを変えるだけで各セクションを独立してカスタマイズできます */
+  --philosophy-bg:    #ec8479;   /* フィロソフィー */
+  --services-bg:      #fafaf4;   /* サービス */
+  --client-works-bg:  rgba(232,224,196,0.88);   /* 実績（請け負った仕事） */
+  --works-bg:         rgba(232,224,196,0.88);   /* 自主企画 */
+  --personal-bg:      #f4baa5;   /* プロフィール */
+  --contact-bg:       #fafaf4;   /* お問い合わせ */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
-  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
-  font-size: 15px;
+  font-family: var(--font-banana), 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  font-size: 21px;
   color: var(--text);
   background-color: var(--bg);
   line-height: 1.7;

@@ -1,4 +1,27 @@
-/* Hero.module.css — サーモンピンク × グリッド */
+/* Hero.module.css */
+
+/* キラキラ（アニメーションなし） */
+/* .sparkle { */
+  /* アニメーションなし */
+/* } */
+
+/* ウェーブ境界線 */
+.waveDivider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 2;
+}
+.waveDivider svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+.waveColor {
+  fill: var(--philosophy-bg);
+}
 
 .hero {
   position: relative;
@@ -8,128 +31,90 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--hero-bg);
+  /* 単色背景 */
+  background-color: #e2cbf6;
+  background-image: none;
 }
 
-/* グリッドパターン */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px);
-  background-size: 48px 48px;
+/* ヒーロー画像（右寄せ） */
+.heroImg {
+  position: absolute !important;
+  top: 50% !important;
+  right: 0 !important;
+  left: auto !important;
+  transform: translateY(-50%);
+  width: auto !important;
+  height: 90vh !important;
+  max-width: 60%;
+  object-fit: contain;
   z-index: 0;
 }
 
-/* 淡いグロー */
-/* .hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 50% 60% at 70% 40%, rgba(255,220,210,0.35) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 40% at 20% 70%, rgba(200,60,60,0.12)   0%, transparent 60%);
-  z-index: 0;
-  pointer-events: none;
-} */
-
-/* 浮遊ドット */
-.floatDot {
-  position: absolute;
-  border-radius: 50%;
-  z-index: 0;
-  animation: floatUp 9s ease-in-out infinite alternate;
+/* 顔写真フェードイン（透明度のみ・位置ずれ防止） */
+@keyframes heroImgFadeAnim {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
-.dot1 { width: 90px; height: 90px; background:rgba(255,255,255,0.25); top:10%; left:6%;    animation-delay:0s;   }
-.dot2 { width: 60px; height: 60px; background:rgba(255,255,255,0.20); top:22%; right:8%;   animation-delay:1.2s; }
-.dot3 { width: 44px; height: 44px; background:rgba(255,255,255,0.18); bottom:18%;left:14%; animation-delay:2s;   }
-.dot4 { width: 36px; height: 36px; background:rgba(255,255,255,0.22); bottom:28%;right:18%;animation-delay:0.6s; }
-.dot5 { width: 22px; height: 22px; background:rgba(255,255,255,0.30); top:58%; left:44%;   animation-delay:1.8s; }
-
-@keyframes floatUp {
-  0%   { transform: translateY(0px)   scale(1);    }
-  100% { transform: translateY(-18px) scale(1.04); }
+.heroImgFade {
+  opacity: 0;
+  animation: heroImgFadeAnim 1.2s ease forwards;
+  animation-delay: 0.1s;
 }
 
-/* ステッカー */
-.sticker {
-  position: absolute;
-  z-index: 2;
-  width: var(--size, 64px);
-  height: var(--size, 64px);
-  transform: rotate(var(--rotate, 0deg));
-  animation: stickerFloat 6s ease-in-out infinite alternate;
-  filter: drop-shadow(2px 4px 8px rgba(139,32,32,0.15));
-  pointer-events: none;
-  user-select: none;
+/* ヒーローコンテンツ入場アニメーション */
+@keyframes heroFadeUp {
+  0%   { opacity: 0; transform: translateY(28px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
-.stickerTopLeft     { animation-delay: 0s;   }
-.stickerTopCenter   { animation-delay: 0.8s; }
-.stickerTopRight    { animation-delay: 1.6s; }
-.stickerMidLeft     { animation-delay: 0.4s; }
-.stickerMidRight    { animation-delay: 1.2s; }
-.stickerBottomLeft  { animation-delay: 2s;   }
-.stickerBottomCenter{ animation-delay: 1s;   }
-.stickerBottomRight { animation-delay: 0.6s; }
 
-@keyframes stickerFloat {
-  0%   { transform: rotate(var(--rotate, 0deg)) translateY(0px);   }
-  100% { transform: rotate(var(--rotate, 0deg)) translateY(-12px); }
+.heroEnter {
+  opacity: 0;
+  animation: heroFadeUp 0.8s ease forwards;
 }
-.stickerEmoji { font-size: var(--size, 64px); line-height: 1; display: block; }
+.heroEnterD1 { animation-delay: 0.2s; }
+.heroEnterD2 { animation-delay: 0.55s; }
+.heroEnterD3 { animation-delay: 0.9s; }
 
-/* ヒーローコンテンツ */
+/* ヒーローコンテンツ（左寄せ） */
 .heroContent {
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
-  padding: 120px 24px 80px;
-  text-align: center;
-}
-
-/* ヒーロー画像 */
-.heroImg {
+  padding: 120px 48px 80px;
+  text-align: left;
+  pointer-events: none;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
 }
 
 /* eyebrow */
 .eyebrow {
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
-  color: rgba(255,255,255,0.85);
+  color: #ec8479;
   letter-spacing: 0.25em;
   text-transform: uppercase;
+  padding-left: 7vw;
+  /* padding-top: 20vh; */
 }
 
-/* 名前 */
+/* タイトル画像 */
+.titleImg {
+  width: clamp(360px, 65vw, 820px);
+}
+
+/* 名前（テキスト版・非使用） */
 .logoText {
   font-size: clamp(52px, 13vw, 110px);
-  font-weight: 900;
+  font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 1.1;
-  color: #f0dfc0;
-  text-shadow: 3px 3px 0 rgba(139,32,32,0.25), 0 2px 16px rgba(139,32,32,0.15);
-  font-family: "Darumadrop One", sans-serif;
-}
-
-/* キャッチコピー */
-.tagline {
-  font-size: 15px;
-  color: rgba(255,255,255,0.85);
-  letter-spacing: 0.08em;
-  max-width: 380px;
-  line-height: 1.8;
+  color: #ffffff;
+  text-shadow: 3px 3px 0 rgba(30,80,70,0.35), 0 2px 20px rgba(30,80,70,0.20);
+  font-family: var(--font-yeseva), sans-serif;
+  text-align: left;
 }
 
 /* スクロールヒント */
@@ -146,8 +131,5 @@
 }
 
 @media (max-width: 768px) {
-  .heroImgWrap { width: 200px; }
-  .imgTop  { width: 200px; height: 100px; border-radius: 100px 100px 0 0; background-size: 200px 200px; }
-  .imgBottom { width: 200px; height: 100px; border-radius: 0 0 100px 100px; background-size: 200px 200px; }
   .sticker { transform: rotate(var(--rotate, 0deg)) scale(0.65); }
 }

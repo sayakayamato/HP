@@ -1,11 +1,12 @@
-import Header            from '../components/Header'
-import Hero              from '../components/Hero'
-import PhilosophySection from '../components/PhilosophySection'
-import WorksSection      from '../components/WorksSection'
-import PersonalSection   from '../components/PersonalSection'
-import SNSSection        from '../components/SNSSection'
-import ContactSection    from '../components/ContactSection'
-import Footer            from '../components/Footer'
+import Header              from '../components/Header'
+import Hero                from '../components/Hero'
+import PhilosophySection   from '../components/PhilosophySection'
+import ServicesSection     from '../components/ServicesSection'
+import ClientWorksSection  from '../components/ClientWorksSection'
+import WorksSection        from '../components/WorksSection'
+import PersonalSection     from '../components/PersonalSection'
+import ContactSection      from '../components/ContactSection'
+import Footer              from '../components/Footer'
 
 export default function Home() {
   return (
@@ -13,10 +14,11 @@ export default function Home() {
       <Header />
       <Hero />
       <PhilosophySection />
+      <ServicesSection />
+      <ClientWorksSection />
       <WorksSection />
       <PersonalSection />
-      <SNSSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
       <Footer />
     </>
   )

@@ -1,26 +1,34 @@
 import styles from '../styles/PhilosophySection.module.css'
+import ScrollReveal from './ScrollReveal'
 
 export default function PhilosophySection() {
   return (
     <section id="philosophy" className={styles.section}>
       <div className={styles.inner}>
-        <div className={styles.titleBlock}>
-          <p className={styles.labelEn}>Philosophy</p>
-          <h2 className={styles.heading}>考え方・ポリシー</h2>
-        </div>
-        <div className={styles.card}>
-          {/* ↓ 自分の考え方・ポリシーを書いてください */}
-          <p className={styles.body}>
-            クライアントの課題を深く理解し、デザインと技術の両面から最適な解決策を提案することを大切にしています。
-            単なる制作にとどまらず、プロジェクトの目的・ユーザーの体験・ビジネスの成果まで考え抜いたアウトプットを届けます。
-          </p>
-          <ul className={styles.tagList}>
-            <li className={styles.tag}>UI / UX デザイン</li>
-            <li className={styles.tag}>フロントエンド開発</li>
-            <li className={styles.tag}>ブランディング</li>
-            <li className={styles.tag}>丁寧なコミュニケーション</li>
-          </ul>
-        </div>
+        <ScrollReveal>
+          <div className={styles.titleBlock}>
+            <p className={styles.labelEn}>Philosophy</p>
+            <h2 className={styles.heading}>考え方・哲学
+            </h2>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={120}>
+          <div>
+            {/* ↓ 自分の考え方・ポリシーを書いてください */}
+            <p >
+              {/* ゆるにたんの精神 */}
+            </p>
+            <p className={styles.body}>
+              「個性」や「違い」を「対立」から「対話」へ。<br />完全に理解はできなくても、自分自身を知ることや他人を理解しようとする姿勢で、<br />
+              世界は少し優しくなる気がしています。
+              <br />
+              そういった「ゆるっと人間探求」、通称「ゆるにたん」の精神を大事にしています。<br />
+              これからは自分たちの価値観や美学が大事になる時代。
+              <br />ぜひ、あなたのお話を聞かせてください！
+              <br />
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )

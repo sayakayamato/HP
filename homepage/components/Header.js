@@ -7,7 +7,7 @@ const navItems = [
   { label: 'About',    href: '#philosophy' },
   { label: 'Works',    href: '#works'       },
   { label: 'Personal', href: '#personal'    },
-  { label: 'Contact',  href: '#contact'     },
+  // { label: 'Contact',  href: '#contact'     },
 ]
 
 export default function Header() {
@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerInner}>
-        <Link href="/" className={styles.logo}>YOUR NAME</Link>
+        <Link href="/" className={styles.logo}>SAYAKA YAMATO</Link>
         <nav className={styles.nav}>
           {navItems.map(item => (
             <Link key={item.href} href={item.href} className={styles.navLink}>{item.label}</Link>

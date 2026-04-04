@@ -1,14 +1,18 @@
 import styles from '../styles/ContactSection.module.css'
+import ScrollReveal from './ScrollReveal'
 
 export default function ContactSection() {
   return (
     <section id="contact" className={styles.section}>
       <div className={styles.inner}>
-        <div className={styles.titleBlock}>
-          <p className={styles.labelEn}>Contact</p>
-          <h2 className={styles.heading}>お問い合わせ</h2>
-          <p className={styles.sub}>お仕事のご依頼・ご相談はお気軽にどうぞ。</p>
-        </div>
+        <ScrollReveal>
+          <div className={styles.titleBlock}>
+            <p className={styles.labelEn}>Contact</p>
+            <h2 className={styles.heading}>お問い合わせ</h2>
+            <p className={styles.sub}>お仕事のご依頼・ご相談はお気軽にどうぞ。</p>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={120}>
         <div className={styles.card}>
           {/* お問い合わせフォーム */}
           <form className={styles.form}>
@@ -27,6 +31,7 @@ export default function ContactSection() {
             <button type="submit" className={styles.btn}>送信する</button>
           </form>
         </div>
+        </ScrollReveal>
       </div>
     </section>
   )
