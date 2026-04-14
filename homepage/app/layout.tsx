@@ -45,8 +45,8 @@ const playfairItalic = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "TOKYO LOLLIPOP | かわいいを、もっと自由に。",
-  description: "TOKYO LOLLIPOPはかわいいファッションを提案するオンラインショップです。",
+  title: "SAYAKA YAMATO",
+  description: "SAYAKA YAMATOのフリーランスポートフォリオサイトです。",
 };
 
 export default function RootLayout({
