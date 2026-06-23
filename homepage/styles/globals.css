@@ -1,36 +1,39 @@
 /* ==========================================
-   globals.css — ミントティール×パープルパレット
+   globals.css — ピンク×ブルー×クリームパレット
+   名刺デザイン参考
    ==========================================
-   --primary     メインカラー（ミントティール）
-   --primary-lt  薄ティール
-   --primary-dk  ダークティール
-   --text        本文色
+   --primary     メインカラー（コーラル）
+   --primary-lt  薄コーラル
+   --primary-dk  ダークコーラル
+   --accent      アクセント（ブルー）
+   --text        本文色（ダークネイビー）
    --muted       サブテキスト
 */
 
 :root {
-  --hero-bg:    #e2cbf6;
+  --hero-bg:    #f1cadc;               /* ピンク（名刺表面） */
   --bg:         #fdfdfd;
-  --bg2:        rgba(232,224,196,0.88);
+  --bg2:        #fdf2e3;               /* クリーム */
   --bg3:        #ffffff;
-  --primary:    #ec8479;
-  --primary-lt: #fa9e94;
+  --primary:    #ec8479;               /* コーラル */
+  --primary-lt: #f4a8a0;
   --primary-dk: #c8675d;
-  --text:       #1a2e2b;
+  --accent:     #667ad7;               /* ブルー/パープル（名刺アクセント） */
+  --accent-lt:  rgba(102,122,215,0.15);
+  --text:       #2d2d4e;               /* ダークネイビー */
   --text-white: #ffffff;
-  --muted:      #6a8a87;
-  --border:     #e2cbf6c8;
+  --muted:      #8a8ab0;
+  --border:     rgba(102,122,215,0.18);
   --radius:     16px;
-  /* --shadow:     0 4px 24px #efe5f8; */
 
   /* ===== セクション個別の背景色 =====
      ここを変えるだけで各セクションを独立してカスタマイズできます */
-  --philosophy-bg:    #ec8479;   /* フィロソフィー */
-  --services-bg:      #fafaf4;   /* サービス */
-  --client-works-bg:  rgba(232,224,196,0.88);   /* 実績（請け負った仕事） */
-  --works-bg:         rgba(232,224,196,0.88);   /* 自主企画 */
-  --personal-bg:      #f4baa5;   /* プロフィール */
-  --contact-bg:       #fafaf4;   /* お問い合わせ */
+  --philosophy-bg:    #667ad7;   /* フィロソフィー（ブルー） */
+  --services-bg:      #fdf2e3;   /* サービス（クリーム） */
+  --client-works-bg:  #f1cadc;   /* 実績（ピンク） */
+  --works-bg:         #fdf2e3;   /* 自主企画（クリーム） */
+  --personal-bg:      #667ad7;   /* プロフィール（ブルー） */
+  --contact-bg:       #fdf2e3;   /* お問い合わせ（クリーム） */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }

@@ -2,20 +2,37 @@
 .section {
   padding: 96px 0;
   position: relative;
-  background-color: #e2cbf6;
-  
+  background-color: var(--personal-bg); /* #667ad7 ブルー */
 }
+/* 右下に名刺裏面インスパイアのブロブ */
 .section::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.28);
+  bottom: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  background: #f1cadc;
+  border-radius: 50%;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.section::after {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  background: #ec8479;
+  border-radius: 50%;
+  opacity: 0.25;
   pointer-events: none;
 }
 .inner { max-width: 760px; margin: 0 auto; padding: 0 32px; display: flex; flex-direction: column; gap: 40px; }
 .titleBlock { display: flex; flex-direction: column; gap: 6px; }
-.labelEn { font-size: 16px; font-weight: 800; letter-spacing: 0.25em; color: var(--primary); text-transform: uppercase; }
-.heading { font-size: 32px; font-weight: 900; color: var(--text); font-family: var(--font-craft), serif; }
+.labelEn { font-size: 16px; font-weight: 800; letter-spacing: 0.25em; color: rgba(255,255,255,0.7); text-transform: uppercase; }
+.heading { font-size: 32px; font-weight: 900; color: #ffffff; font-family: var(--font-craft), serif; }
 .card {
   background: var(--bg3);
   border-radius: var(--radius);

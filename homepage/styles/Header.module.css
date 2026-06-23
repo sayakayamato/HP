@@ -4,7 +4,7 @@
   top: 0; left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(232,224,196,0.88);
+  background: rgba(241,202,220,0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
@@ -20,7 +20,7 @@
 .logo {
   font-size: 15px;
   font-weight: 800;
-  color: var(--primary-dk);
+  color: var(--accent);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -53,7 +53,7 @@
   border-radius: 2px;
 }
 .drawer {
-  background: rgba(232,224,196,0.97);
+  background: rgba(241,202,220,0.97);
   border-top: 1px solid var(--border);
   padding: 8px 0 20px;
   display: flex;

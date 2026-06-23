@@ -1,9 +1,14 @@
 /* Hero.module.css */
 
-/* キラキラ（アニメーションなし） */
-/* .sparkle { */
-  /* アニメーションなし */
-/* } */
+/* ==========================================
+   Z-index レイヤー設計
+   0: heroBgVideo（動画背景）
+   1: videoOverlay（オーバーレイ）
+   2: shapeBlue / shapeCoral / shapeCream（大円）
+   4: sparkles（キラキラ）
+   5: heroContent（テキスト）
+   6: waveDivider（ウェーブ）
+   ========================================== */
 
 /* ウェーブ境界線 */
 .waveDivider {
@@ -12,7 +17,7 @@
   left: 0;
   width: 100%;
   line-height: 0;
-  z-index: 2;
+  z-index: 6;
 }
 .waveDivider svg {
   display: block;
@@ -23,113 +28,187 @@
   fill: var(--philosophy-bg);
 }
 
+/* ========================================
+   ヒーローセクション本体
+   動画なし時はグラデーションアニメーションが流れる
+   ======================================== */
 .hero {
   position: relative;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* 単色背景 */
-  background-color: #e2cbf6;
-  background-image: none;
+  gap: 40px;
+  background: #667ad7;
 }
 
-/* ヒーロー画像（右寄せ） */
-.heroImg {
-  position: absolute !important;
-  top: 50% !important;
-  right: 0 !important;
-  left: auto !important;
-  transform: translateY(-50%);
-  width: auto !important;
-  height: 90vh !important;
-  max-width: 60%;
-  object-fit: contain;
+@keyframes gradientDrift {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+/* ========================================
+   背景画像
+   ======================================== */
+.heroBgImg {
+  object-fit: cover;
+  object-position: center;
   z-index: 0;
-}
-
-/* 顔写真フェードイン（透明度のみ・位置ずれ防止） */
-@keyframes heroImgFadeAnim {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
-.heroImgFade {
   opacity: 0;
-  animation: heroImgFadeAnim 1.2s ease forwards;
-  animation-delay: 0.1s;
+  animation: videoFadeIn 1.0s ease 0.1s forwards;
 }
 
-/* ヒーローコンテンツ入場アニメーション */
+@keyframes videoFadeIn {
+  to { opacity: 1; }
+}
+
+/* ========================================
+   ピンク半透明オーバーレイ
+   動画の上に乗せて色調を統一
+   ======================================== */
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  /* テキスト可読性のための薄いオーバーレイ */
+  background: rgba(102, 122, 215, 0.15);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* hero の pseudo-element は使わない */
+.hero::before, .hero::after { display: none; }
+.blobLeft { display: none; }
+
+/* ========================================
+   大円シェイプ — TOKIWA インスパイア
+   右端からはみ出しアークとして見える
+   ブルー（奥）→ コーラル（中）→ クリーム（手前）
+   ======================================== */
+
+/* ブルー大円（背面・右上） */
+.shapeBlue {
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 80vw;
+  height: 80vw;
+  max-width: 900px;
+  max-height: 900px;
+  background: #667ad7;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* コーラル大円（中間・右中） */
+.shapeCoral {
+  position: absolute;
+  top: 8%;
+  right: -18%;
+  width: 68vw;
+  height: 68vw;
+  max-width: 760px;
+  max-height: 760px;
+  background: #ec8479;
+  border-radius: 50%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* クリーム大円（前面・右下） */
+.shapeCream {
+  position: absolute;
+  bottom: -28%;
+  right: -16%;
+  width: 62vw;
+  height: 62vw;
+  max-width: 700px;
+  max-height: 700px;
+  background: #fdf2e3;
+  border-radius: 50%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* ========================================
+   中央浮遊オブジェクト
+   ======================================== */
+@keyframes floating {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-28px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes shadowPulse {
+  0%   { filter: drop-shadow(0 32px 40px rgba(102, 122, 215, 0.45)); }
+  50%  { filter: drop-shadow(0 12px 20px rgba(102, 122, 215, 0.20)); }
+  100% { filter: drop-shadow(0 32px 40px rgba(102, 122, 215, 0.45)); }
+}
+
+.floatingWrap {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floating 3.6s ease-in-out infinite;
+}
+
+.floatingImg {
+  width: clamp(700px, 80vw, 1200px);
+  height: auto;
+  animation: shadowPulse 3.6s ease-in-out infinite;
+}
+
+/* ========================================
+   入場アニメーション
+   ======================================== */
 @keyframes heroFadeUp {
   0%   { opacity: 0; transform: translateY(28px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
 .heroEnter {
   opacity: 0;
   animation: heroFadeUp 0.8s ease forwards;
 }
-.heroEnterD1 { animation-delay: 0.2s; }
-.heroEnterD2 { animation-delay: 0.55s; }
-.heroEnterD3 { animation-delay: 0.9s; }
-
-/* ヒーローコンテンツ（左寄せ） */
-.heroContent {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  padding: 120px 48px 80px;
-  text-align: left;
-  pointer-events: none;
-  width: 100%;
-}
-
-/* eyebrow */
-.eyebrow {
-  font-size: 18px;
-  font-weight: 700;
-  color: #ec8479;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  padding-left: 7vw;
-  /* padding-top: 20vh; */
-}
-
-/* タイトル画像 */
-.titleImg {
-  width: clamp(360px, 65vw, 820px);
-}
-
-/* 名前（テキスト版・非使用） */
-.logoText {
-  font-size: clamp(52px, 13vw, 110px);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: 1.1;
-  color: #ffffff;
-  text-shadow: 3px 3px 0 rgba(30,80,70,0.35), 0 2px 20px rgba(30,80,70,0.20);
-  font-family: var(--font-yeseva), sans-serif;
-  text-align: left;
-}
+.heroEnterD1 { animation-delay: 0.4s; }
+.heroEnterD2 { animation-delay: 0.75s; }
+.heroEnterD3 { animation-delay: 1.1s; }
 
 /* スクロールヒント */
 .scrollHint {
-  margin-top: 8px;
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 11px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.75);
   letter-spacing: 0.15em;
   animation: bounce 2s ease-in-out infinite;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  z-index: 5;
 }
 @keyframes bounce {
   0%,100% { transform: translateY(0); }
   50%      { transform: translateY(6px); }
 }
 
+/* キラキラ（名前（テキスト版）は非使用） */
+.logoText {
+  font-size: clamp(52px, 13vw, 110px);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: #ffffff;
+  font-family: var(--font-yeseva), sans-serif;
+}
+
 @media (max-width: 768px) {
-  .sticker { transform: rotate(var(--rotate, 0deg)) scale(0.65); }
+  .shapeBlue  { width: 110vw; height: 110vw; top: -20%; right: -30%; }
+  .shapeCoral { width: 95vw;  height: 95vw;  top: 10%;  right: -25%; }
+  .shapeCream { width: 90vw;  height: 90vw;  bottom: -20%; right: -25%; }
 }
