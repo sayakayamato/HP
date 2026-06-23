@@ -135,6 +135,42 @@
 }
 
 /* ========================================
+   テキスト＋浮遊オブジェクト横並び行
+   ======================================== */
+.heroRow {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroTextLeft,
+.heroTextRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-banana), sans-serif;
+  color: rgba(255, 255, 255, 0.90);
+  font-size: clamp(20px, 2.4vw, 30px);
+  letter-spacing: 0.12em;
+  line-height: 1.8;
+  white-space: nowrap;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+}
+
+.heroTextLeft {
+  right: calc(50% + 10vw);
+  text-align: right;
+}
+
+.heroTextRight {
+  left: calc(50% + 15vw);
+  text-align: left;
+}
+
+/* ========================================
    中央浮遊オブジェクト
    ======================================== */
 @keyframes floating {
@@ -151,7 +187,6 @@
 
 .floatingWrap {
   position: relative;
-  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
