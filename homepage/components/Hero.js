@@ -24,6 +24,14 @@ export default function Hero() {
       <Sparkle size={20} style={{ position:'absolute', top:'55%',  left:'9%',  zIndex:4 }} color="rgba(255,255,255,0.4)" />
       <Sparkle size={13} style={{ position:'absolute', top:'62%',  right:'20%',zIndex:4 }} color="rgba(255,255,255,0.4)" />
 
+　　　　{/* yamato_to 画像 */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/yamatologo2025.png"
+        alt=""
+        className={`${styles.yamatoImg} ${styles.heroEnter} ${styles.heroEnterD3}`}
+      />
+      
       {/* テキスト＋浮遊オブジェクト横並び */}
       <div className={styles.heroRow}>
         <p className={`${styles.heroTextLeft} ${styles.heroEnter} ${styles.heroEnterD1}`}>

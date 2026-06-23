@@ -5,7 +5,7 @@
   background-color: var(--personal-bg); /* #667ad7 ブルー */
 }
 /* 右下に名刺裏面インスパイアのブロブ */
-.section::before {
+.section::before { display: none;
   content: '';
   position: absolute;
   bottom: -80px;
@@ -17,7 +17,7 @@
   opacity: 0.35;
   pointer-events: none;
 }
-.section::after {
+.section::after { display: none;
   content: '';
   position: absolute;
   top: -60px;

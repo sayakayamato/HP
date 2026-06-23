@@ -15,9 +15,9 @@
   --bg:         #fdfdfd;
   --bg2:        #fdf2e3;               /* クリーム */
   --bg3:        #ffffff;
-  --primary:    #ec8479;               /* コーラル */
-  --primary-lt: #f4a8a0;
-  --primary-dk: #c8675d;
+  --primary:    #667ad7;               /* コーラル */
+  --primary-lt: #667ad7;
+  --primary-dk: #667ad7;
   --accent:     #667ad7;               /* ブルー/パープル（名刺アクセント） */
   --accent-lt:  rgba(102,122,215,0.15);
   --text:       #2d2d4e;               /* ダークネイビー */
@@ -29,11 +29,12 @@
   /* ===== セクション個別の背景色 =====
      ここを変えるだけで各セクションを独立してカスタマイズできます */
   --philosophy-bg:    #667ad7;   /* フィロソフィー（ブルー） */
-  --services-bg:      #fdf2e3;   /* サービス（クリーム） */
+  --services-bg:      #f6fbfb;   /* サービス（クリーム） */
   --client-works-bg:  #f1cadc;   /* 実績（ピンク） */
-  --works-bg:         #fdf2e3;   /* 自主企画（クリーム） */
-  --personal-bg:      #667ad7;   /* プロフィール（ブルー） */
-  --contact-bg:       #fdf2e3;   /* お問い合わせ（クリーム） */
+  --works-bg:         #f6fbfb;   /* 自主企画（クリーム） */
+  --personal-bg:      #f1cadc;   /* プロフィール（ブルー） */
+  --contact-bg:       #ffffff;   /* お問い合わせ（クリーム） */
+  --podcast-bg:       #f6fbfb;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }

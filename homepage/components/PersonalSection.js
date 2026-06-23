@@ -49,7 +49,7 @@ export default function PersonalSection() {
       <div className={styles.inner}>
         <div className={styles.titleBlock}>
           <p className={styles.labelEn}>Personal</p>
-          <h2 className={styles.heading}>プロフィール</h2>
+          <h2 className={styles.heading}>Who is yamato?</h2>
         </div>
         <div className={styles.card}>
           {/* アバター画像エリア */}

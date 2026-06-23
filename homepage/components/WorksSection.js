@@ -7,15 +7,15 @@ import ScrollReveal from './ScrollReveal'
 
 /* ↓ 実績データを差し替えてください */
 const works = [
-  {
-    id: 1,
-    image: '/images/yurunitan.jpg',
-    category: '自主Media',
-    title: 'ゆるにたんらぼ',
-    desc:  '性格、人間心理などの発信活動',
-    detail: '自分や相手を知るきっかけになるような発信をしています。人間心理や性格分析、お悩み相談など。',
-    link: 'https://www.tiktok.com/@yurunitan_lab?is_from_webapp=1&sender_device=pc',
-  },
+  // {
+  //   id: 1,
+  //   image: '/images/yurunitan.jpg',
+  //   category: '自主Media',
+  //   title: 'ゆるにたんらぼ',
+  //   desc:  '性格、人間心理などの発信活動',
+  //   detail: '自分や相手を知るきっかけになるような発信をしています。人間心理や性格分析、お悩み相談など。',
+  //   link: 'https://www.tiktok.com/@yurunitan_lab?is_from_webapp=1&sender_device=pc',
+  // },
   {
     id: 2,
     image: '/images/proffleImage.png',
@@ -59,7 +59,7 @@ export default function WorksSection() {
         <ScrollReveal>
           <div className={styles.titleBlock}>
             <p className={styles.labelEn}>Works</p>
-            <h2 className={styles.heading}>自主企画</h2>
+            <h2 className={styles.heading}>プロダクト</h2>
           </div>
         </ScrollReveal>
 

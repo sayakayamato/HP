@@ -1,32 +1,4 @@
-/* Hero.module.css */
 
-/* ==========================================
-   Z-index レイヤー設計
-   0: heroBgVideo（動画背景）
-   1: videoOverlay（オーバーレイ）
-   2: shapeBlue / shapeCoral / shapeCream（大円）
-   4: sparkles（キラキラ）
-   5: heroContent（テキスト）
-   6: waveDivider（ウェーブ）
-   ========================================== */
-
-/* ウェーブ境界線 */
-.waveDivider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  line-height: 0;
-  z-index: 6;
-}
-.waveDivider svg {
-  display: block;
-  width: 100%;
-  height: 80px;
-}
-.waveColor {
-  fill: var(--philosophy-bg);
-}
 
 /* ========================================
    ヒーローセクション本体
@@ -267,4 +239,11 @@
     max-width: 88vw;
     line-height: 1.6;
   }
+}
+
+/* yamato_to 画像 */
+.yamatoImg {
+  width: clamp(480px, 60vw, 960px);
+  height: auto;
+  z-index: 5;
 }

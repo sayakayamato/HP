@@ -4,6 +4,10 @@ import ScrollReveal from './ScrollReveal'
 export default function PhilosophySection() {
   return (
     <section id="philosophy" className={styles.section}>
+
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/images/kira.png" alt="" className={styles.kiraImg} aria-hidden="true" />
+
       <div className={styles.inner}>
         <ScrollReveal>
           <div className={styles.titleBlock}>
