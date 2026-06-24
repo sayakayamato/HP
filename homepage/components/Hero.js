@@ -31,13 +31,14 @@ export default function Hero() {
         alt=""
         className={`${styles.yamatoImg} ${styles.heroEnter} ${styles.heroEnterD3}`}
       />
-      
+
       {/* テキスト＋浮遊オブジェクト横並び */}
       <div className={styles.heroRow}>
         <p className={`${styles.heroTextLeft} ${styles.heroEnter} ${styles.heroEnterD1}`}>
           変わり続ける時代に、
         </p>
 
+        <div className={styles.floatingFadeIn}>
         <div className={styles.floatingWrap}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -45,6 +46,7 @@ export default function Hero() {
             alt=""
             className={styles.floatingImg}
           />
+        </div>
         </div>
 
         <p className={`${styles.heroTextRight} ${styles.heroEnter} ${styles.heroEnterD2}`}>
