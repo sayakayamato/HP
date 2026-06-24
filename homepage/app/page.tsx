@@ -1,11 +1,10 @@
 import Header              from '../components/Header'
 import Hero                from '../components/Hero'
 import PhilosophySection   from '../components/PhilosophySection'
-import PodcastSection      from '../components/PodcastSection'
-import WorksSection        from '../components/WorksSection'
+import CreationsSection    from '../components/CreationsSection'
+import PersonalSection     from '../components/PersonalSection'
 import ServicesSection     from '../components/ServicesSection'
 import ClientWorksSection  from '../components/ClientWorksSection'
-import PersonalSection     from '../components/PersonalSection'
 import ContactSection      from '../components/ContactSection'
 import Footer              from '../components/Footer'
 
@@ -15,12 +14,11 @@ export default function Home() {
       <Header />
       <Hero />
       <PhilosophySection />
-      <PodcastSection />
-      <WorksSection />
+      <CreationsSection />
       <PersonalSection />
       <ServicesSection />
       <ClientWorksSection />
-      {/* <ContactSection /> */}
+      <ContactSection />
       <Footer />
     </>
   )

@@ -11,7 +11,7 @@ const works = [
     id: 1,
     image: '/images/marketing_img.jpg',
     category: 'マーケティング',
-    title: 'マーケティング支援(継続中)',
+    title: 'マーケティング支援',
     desc: 'バナー制作やメールマガジン、プレスリリース等ライティング業務',
     detail: 'HR系企業のマーケティング領域を継続して担当しています。',
     link: '#',
@@ -20,9 +20,9 @@ const works = [
     id: 2,
     image: '/images/VR1.jpg',
     category: 'クリエイティブ',
-    title: 'XRプロジェクト参加',
+    title: 'XRプロジェクト',
     desc: 'コンテンツ・システムテスト、運用提案等',
-    detail: 'XRプロジェクトのディレクターとして務めていた経験から、コンテンツやシステムのテストや、運用提案などを担当しました。',
+    detail: 'XRプロジェクトのディレクターとして務めていた経験から、コンテンツやシステムのテストや、運用提案などを担当',
     link: '#',
   },
   
@@ -40,8 +40,8 @@ export default function ClientWorksSection() {
         <ScrollReveal>
           <div className={styles.titleBlock}>
             <p className={styles.labelEn}>Works</p>
-            <h2 className={styles.heading}>実績</h2>
-            <p className={styles.sub}>業務委託・請け負ったお仕事</p>
+            <h2 className={styles.heading}>クライアントワーク</h2>
+            {/* <p className={styles.sub}>業務委託・請け負ったお仕事</p> */}
           </div>
         </ScrollReveal>
 

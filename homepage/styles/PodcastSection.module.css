@@ -71,7 +71,7 @@
 .comingSoonOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(236,132,121,0.75);
+  background:#667ad7;
   display: flex;
   flex-direction: column;
   align-items: center;

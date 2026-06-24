@@ -253,7 +253,7 @@
 .comingSoonOverlay {
   position: absolute;
   inset: 0;
-  background: #ec8479c1;
+  background: #667ad7;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   display: flex;

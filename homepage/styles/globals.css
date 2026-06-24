@@ -29,7 +29,7 @@
   /* ===== セクション個別の背景色 =====
      ここを変えるだけで各セクションを独立してカスタマイズできます */
   --philosophy-bg:    #667ad7;   /* フィロソフィー（ブルー） */
-  --services-bg:      #f6fbfb;   /* サービス（クリーム） */
+  --services-bg:      #f1cadc;   /* サービス（クリーム） */
   --client-works-bg:  #f1cadc;   /* 実績（ピンク） */
   --works-bg:         #f6fbfb;   /* 自主企画（クリーム） */
   --personal-bg:      #f1cadc;   /* プロフィール（ブルー） */
