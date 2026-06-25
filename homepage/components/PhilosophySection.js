@@ -5,8 +5,13 @@ export default function PhilosophySection() {
   return (
     <section id="philosophy" className={styles.section}>
 
+      {/* デコレーション画像 */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/images/kira.png" alt="" className={styles.kiraImg} aria-hidden="true" />
+      <img src="/images/hoshi.png"  alt="" className={styles.hoshi1}   aria-hidden="true" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/images/hoshi2.png" alt="" className={styles.hoshi2}   aria-hidden="true" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/images/hoshi4.png" alt="" className={styles.hoshi3}   aria-hidden="true" />
 
       <div className={styles.inner}>
         <ScrollReveal>
@@ -18,7 +23,6 @@ export default function PhilosophySection() {
         </ScrollReveal>
         <ScrollReveal delay={120}>
           <div>
-            {/* ↓ 自分の考え方・ポリシーを書いてください */}
             <p >
               {/* ゆるにたんの精神 */}
             </p>

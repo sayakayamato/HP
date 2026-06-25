@@ -23,6 +23,10 @@ export default function Hero() {
       <Sparkle size={14} style={{ position:'absolute', top:'32%',  left:'55%', zIndex:4 }} color="rgba(255,255,255,0.4)" />
       <Sparkle size={20} style={{ position:'absolute', top:'55%',  left:'9%',  zIndex:4 }} color="rgba(255,255,255,0.4)" />
       <Sparkle size={13} style={{ position:'absolute', top:'62%',  right:'20%',zIndex:4 }} color="rgba(255,255,255,0.4)" />
+      <Sparkle size={20} style={{ position:'absolute', top:'15%',  right:'8%', zIndex:4 }} color="rgba(255,255,255,0.6)" />
+      <Sparkle size={14} style={{ position:'absolute', top:'35%',  right:'5%', zIndex:4 }} color="rgba(255,255,255,0.4)" />
+      <Sparkle size={17} style={{ position:'absolute', top:'50%',  right:'14%',zIndex:4 }} color="rgba(255,255,255,0.5)" />
+      <Sparkle size={11} style={{ position:'absolute', top:'78%',  right:'9%', zIndex:4 }} color="rgba(255,255,255,0.4)" />
 
 　　　　{/* yamato_to 画像 */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
