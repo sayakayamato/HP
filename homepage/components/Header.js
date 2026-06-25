@@ -4,10 +4,12 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 const navItems = [
-  { label: 'About',    href: '#philosophy' },
-  { label: 'Works',    href: '#works'       },
-  { label: 'Personal', href: '#personal'    },
-  // { label: 'Contact',  href: '#contact'     },
+  { label: 'Philosophy', href: '#philosophy'  },
+  { label: 'Creations',  href: '#creations'   },
+  { label: 'About',      href: '#personal'    },
+  { label: 'Services',   href: '#services'    },
+  { label: 'Works',      href: '#client-works'},
+  { label: 'Contact',    href: '#contact'     },
 ]
 
 export default function Header() {

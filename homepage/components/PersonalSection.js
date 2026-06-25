@@ -47,7 +47,7 @@ export default function PersonalSection() {
           {/* アバター画像エリア */}
           <div className={styles.avatarWrap}>
             <div className={styles.avatar}>
-              <Image src="/images/IMG_2284_2.jpg" alt="avatar" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/yamatoImage2.png" alt="avatar" fill style={{ objectFit: 'cover' }} />
               <span className={styles.avatarFallback}></span>
             </div>
           </div>
@@ -61,10 +61,9 @@ export default function PersonalSection() {
             <p className={styles.bio}>
               {/* ↓ 自己紹介を書いてください */}
               東京在住のフリーランスです。
-              人間の内面理解に興味があり、精神性×テクノロジーとしてXR企業に務め、その後組織における人間理解として人事職に携わりました。
+              人間の内面理解に興味があり、<br />精神性×テクノロジーとしてXR企業に務め、その後組織における人間理解として人事職に携わりました。
               <br />
-              今は個人で、人を内面からサポートしたり、それぞれの価値観やこだわりを大切にできるような活動がしたいと思っています。
-              たまにジャズバーで働いています。
+              新しいものも受け入れつつ、変わらない本質を探求する、そんなコンテンツ作りがしたいと思っています！
             </p>
             <ul className={styles.skillList}>
               <li className={styles.skill}>#お散歩</li>
@@ -73,7 +72,6 @@ export default function PersonalSection() {
               <li className={styles.skill}>#スイーツ</li>
               <li className={styles.skill}>#美術館・アート</li>
               <li className={styles.skill}>#クラシック・ジャズ</li>
-              <li className={styles.skill}>#占い</li>
             </ul>
             {/* SNSアイコン */}
             <div className={styles.snsRow}>

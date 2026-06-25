@@ -79,7 +79,7 @@
   position: absolute;
   bottom: 20%;
   left: 18%;
-  width: clamp(150px, 20vw, 300px);
+  width: clamp(100px, 10vw, 300px);
   height: auto;
   opacity: 0.55;
   pointer-events: none;
